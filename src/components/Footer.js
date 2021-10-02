@@ -1,16 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-
-
-const mapState = ({ user }) => ({
-    currentUser: user.currentUser
-});
 
 
 const Footer = () => {
 
-    const { currentUser } = useSelector(mapState);
+
 
     return (
 
@@ -124,6 +118,7 @@ const Footer = () => {
                                         <li><Link to="#">term &amp; condition</Link></li>
                                         <li><Link to="#">privacy policy</Link></li>
                                         <li><Link to="contact-us.html">contact us</Link></li>
+
                                     </ul>
                                 </nav>
                             </div>
