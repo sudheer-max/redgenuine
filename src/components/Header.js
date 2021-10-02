@@ -132,7 +132,17 @@ const Header = (props) => {
                                                     <li><Link to="/ss-water-bottle">SS Water Bottle</Link></li>
                                                 </ul>
                                             </li>
+                                            <AdminLink></AdminLink>
                                             <li><Link to="contact.html">Contact Us</Link></li>
+                                            {!currentUser && (
+                                                <>
+                                                    <li><Link to="/login">Login</Link></li>
+                                                    <li><Link to="/register">Register</Link></li>
+                                                </>
+                                            )}
+                                            {currentUser && (
+                                                <li><Link onClick={signOut}>Logout</Link></li>
+                                            )}
                                         </ul>
                                     </div>
                                 </nav>
